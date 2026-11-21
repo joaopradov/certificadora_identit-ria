@@ -82,7 +82,7 @@ export default function EscolaForm() {
                 <Field label="Situação" name="situacao" options={SITUACOES_ESCOLA} value={form.situacao} onChange={set('situacao')} />
               </div>
               <div className="form-row">
-                <Field label="Cidade" name="cidade" value={form.cidade} onChange={set('cidade')} />
+                <Field label="Cidade" name="cidade" value={form.cidade} onChange={set('cidade')} required />
                 <Field label="Endereço" name="endereco" value={form.endereco} onChange={set('endereco')} placeholder="Rua, número, bairro" />
               </div>
               <div className="form-row">
@@ -96,7 +96,7 @@ export default function EscolaForm() {
             <div className="card-header">Representante da escola</div>
             <div className="card-body">
               <div className="form-row">
-                <Field label="Nome do representante" name="representante_nome" value={form.representante.nome} onChange={setRep('nome')} placeholder="Nome completo" />
+                <Field label="Nome do representante" name="representante_nome" value={form.representante.nome} onChange={setRep('nome')} placeholder="Nome completo" required />
                 <Field label="Cargo" name="representante_cargo" value={form.representante.cargo} onChange={setRep('cargo')} placeholder="Ex.: Diretor(a)" />
               </div>
               <div className="form-row">
